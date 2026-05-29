@@ -1,16 +1,15 @@
-# React + Vite
+# Museo3D - The Vault (Homenaje a Alfredo Di Stéfano)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación interactiva en 3D desarrollada con React, Three.js y React Three Fiber que recrea una galería de museo virtual. El espacio rinde homenaje a grandes figuras del fútbol, centrándose principalmente en la legendaria carrera de Alfredo Di Stéfano ("La Saeta Rubia") e incorporando camisetas históricas, audios explicativos y detalles interactivos.
 
-Currently, two official plugins are available:
+## 🚀 Características
+- **Experiencia Inmersiva en 3D:** Recorrido virtual interactivo en tiempo real por diferentes salas de exhibición.
+- **Cinemática de Entrada Fluida:** Animación de cámara cinematográfica inicial sin fricción.
+- **Audios Interactivos:** Explicaciones en audio para cada exhibición (camisetas de Jordania, Sri Lanka, Palestina, Kuwait, Boccini y la Bruja Verón).
+- **Rendimiento de GPU Optimizado:** Pre-renderizado inteligente de mapas de sombras (shadow maps) y compilación de shaders en la pantalla de carga para eliminar microcortes y spikes de fotogramas (frame drops) durante el recorrido.
+- **Interfaz Moderna:** Paneles interactivos de información con diseño premium y animaciones fluidas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologías
+- **Core:** [React 18](https://react.dev/) + [Vite](https://vite.dev/)
+- **Gráficos 3D:** [Three.js](https://threejs.org/) + [@react-three/fiber](https://r3f.docs.pmnd.rs/) + [@react-three/drei](https://github.com/pmndrs/drei)
+- **Despliegue:** GitHub Pages + GitHub Actions para integración continua y despliegue automático.
