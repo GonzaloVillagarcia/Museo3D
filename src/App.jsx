@@ -1530,7 +1530,7 @@ const PedestalStation = ({ exhibit, isActive, isPremiumEnabled, onClick }) => {
   // Initialize and handle audio lifecycle
   useEffect(() => {
     if (exhibit.audioUrl) {
-      const audio = new Audio(exhibit.audioUrl);
+      const audio = new Audio(window.getAssetPath ? window.getAssetPath(exhibit.audioUrl) : exhibit.audioUrl);
       audio.volume = volume;
       audio.loop = false;
       audioRef.current = audio;
@@ -1936,7 +1936,7 @@ const PedestalStation = ({ exhibit, isActive, isPremiumEnabled, onClick }) => {
                         )}
                         {activeTab === 'image' && exhibit.imageUrl && (
                           <div style={{ borderRadius: '4px', overflow: 'hidden', border: '1px solid rgba(0,240,255,0.2)', backgroundColor: 'rgba(0,0,0,0.3)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <img src={exhibit.imageUrl} alt={exhibit.title} style={{ maxWidth: '100%', maxHeight: '100%', display: 'block', objectFit: 'contain' }} />
+                            <img src={window.getAssetPath ? window.getAssetPath(exhibit.imageUrl) : exhibit.imageUrl} alt={exhibit.title} style={{ maxWidth: '100%', maxHeight: '100%', display: 'block', objectFit: 'contain' }} />
                           </div>
                         )}
                       </div>
