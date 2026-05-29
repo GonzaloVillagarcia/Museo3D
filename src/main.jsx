@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 
 window.getAssetPath = (path) => {
+  if (typeof path !== 'string') return path;
   if (!path) return path;
   if (path.startsWith('http') || path.startsWith('data:') || path.startsWith('blob:')) return path;
   const base = import.meta.env.BASE_URL || '/';
